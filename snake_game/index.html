@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #AECE8B;
+        }
+
+        .game-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #game-board {
+            background-color: #8EB266;
+            width: 60vmin;
+            height: 60vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+            border: 0.3vmin solid #191e0f;
+        }
+
+        .snake {
+            background-color: #202713;
+            border: .13vmin solid rgb(0, 45, 5);
+            border-radius: 0.8vmin;
+        }
+        
+        .food {
+            background-color: hsl(49, 100%, 50%);
+            border: .13vmin solid rgb(228, 205, 0);
+            border-radius: 0.8vmin;
+        }
+
+        #title-game {
+            font-size: 5vmin;
+            margin: 0;
+            margin-bottom: 5%;
+            font-family: 'Press Start 2P';
+            color: #202713;
+        }
+
+        #score-game-style {
+            align-self: flex-start;
+            font-size: 1.5vmin;
+            font-family: 'Press Start 2P';
+            color: #202713;
+        }
+    </style>
+    <script src="game.js" defer type="module"> </script>
+</head>
+<body>
+    <div class="game-page">
+        <h1 id="title-game">Snake</h1>
+        <div id='game-board'></div>
+        <p id="score-game-style">SCORE: <span id="score-game">0</span></p>
+    </div>
+
+</body>
+</html>
